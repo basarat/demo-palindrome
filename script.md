@@ -63,5 +63,23 @@ The insight to a better solution is to realize that a pattern exists among chara
 * The same pattern would hold for any set of characters that can form a palindrome.
 * All characters must be paired off. Only 1 character is allowed to be left unpaired.
 
+This reduces our question to a simple character counting problem. 
+
 ```js
+function isAnyPermutationPalindrome(str: string) {
+  const unmatched = new Set<string>();
+  str.split('').forEach(char => {
+    if (unmatched.has(char)) unmatched.delete(char);
+    else unmatched.add(char);
+  });
+  const count = Array.from(unmatched.entries()).length;
+  return count === 0 || count === 1;
+}
 ```
+
+* We create a set to keep track of our unmatched characters. 
+* We go through each character in the string 
+* If it is in the current unmatched, then great, we can delete it as it is now matched.
+* If it isn't we simply add it.
+* After we have gone through all the characters we simply check the count of the entries
+* And the characters of the string can form a palindrome if the count is 0 or 1.
