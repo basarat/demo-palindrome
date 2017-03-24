@@ -44,6 +44,7 @@ A more complex algorithmic challenge is to check if `any permutation of` a given
  * civic true
  * vicic true 
  * toot true
+ * toto true
  * civil false
  */
 ```
