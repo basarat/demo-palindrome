@@ -72,8 +72,7 @@ function isAnyPermutationPalindrome(str: string) {
     if (unmatched.has(char)) unmatched.delete(char);
     else unmatched.add(char);
   });
-  const count = Array.from(unmatched.entries()).length;
-  return count <= 1;
+  return unmatched.size <= 1;
 }
 ```
 
