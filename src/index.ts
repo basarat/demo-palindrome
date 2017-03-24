@@ -16,7 +16,7 @@ function isAnyPermutationPalindrome(str: string) {
     else unmatched.add(char);
   });
   const count = Array.from(unmatched.entries()).length;
-  return count === 0 || count === 1;
+  return count <= 1;
 }
 
 assert(isAnyPermutationPalindrome('civic'));
