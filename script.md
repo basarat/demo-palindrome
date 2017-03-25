@@ -63,7 +63,7 @@ The insight to a better solution is to realize that a pattern exists among chara
 * The same pattern would hold for any set of characters that can form a palindrome.
 * All characters must be paired off. Only 1 character is allowed to be left unpaired.
 
-This reduces our question to a simple character counting problem. 
+This reduces our requirement to a simple character counting problem. 
 
 ```js
 function isAnyPermutationPalindrome(str: string) {
